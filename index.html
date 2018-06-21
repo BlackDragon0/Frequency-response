@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-TW">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Convolution</title>
+
+		<meta name="description" content="convolution slideshow">
+		<meta name="author" content="Ryan">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/gaslight.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/tomorrow-night-bright.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-background="dark">	
+					<h1 class="white">Frequency Response</h1>
+					<h3 class="white">Project for signal and system class.</h3>
+					<p class="white">鄭聖玄</p>
+				</section>	
+
+				<section data-markdown data-separator="^--">
+					## 系統描述
+					有圖形介面計算Frequency Response的軟體
+					--
+					## 設計方法
+
+					### Pseudo code -> Python code
+					* Get X[] input from user -> askopenfilename()
+					* Get h[] input from user -> askopenfilename()
+					* Compute the frequency response -> w, h = signal.freqz(b, a)
+					* Output result
+					--
+					## 系統流程圖
+					* 開始
+					* 使用者input X[ ]
+					* 使用者input h[ ]
+					* 使用者按下計算
+					* 顯示 Angle (radians)
+					* 顯示 Amplitude 
+					--
+					## 系統環境
+					--
+					### 開發環境
+					* Windows 10
+					* Python 3.6.5
+					--
+					### 使用的程式語言
+					* Python
+					--
+					### Library
+					* PyQt5
+					* matplotlib
+					* numpy
+					* scipy
+					* tkinter
+					--
+					## 系統測試
+				</section>
+
+				<section>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/vu3jKwR89gA?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				</section>
+
+
+				<section data-background="dark">
+					<h1 class="white">THE END</h1> 
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
